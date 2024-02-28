@@ -1,0 +1,104 @@
+.tenant-page-wrap {
+  flex-direction: column;
+  height: 100vh;
+  //   height: calc(100vh - calc(100vh - 100%));
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 0.2676000702247191) 0,
+    rgba(148, 187, 233, 0.2198472612359551) 83%
+  );
+  position: relative;
+  padding: 20px;
+  &:after {
+    top: unset;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    position: absolute;
+    border-radius: 50% 50% 100% 0% / 100% 50% 50% 0%;
+    width: 40%;
+    height: 22%;
+    background: #ece9f13d;
+    z-index: -1;
+    filter: drop-shadow(3px 2px 4px #dee1ec);
+  }
+  &:before {
+    top: unset;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: #d8dcea4d;
+    z-index: 0;
+    filter: drop-shadow(3px 2px 4px #dee1ec);
+    border-radius: 50% 50% 100% 0% / 100% 50% 50% 0%;
+    width: 20%;
+    height: 10%;
+  }
+  .logo-wrap {
+    width: auto;
+    height: 100px;
+    // margin-bottom: 20px;
+    background: transparent;
+    box-shadow: 0 4px 30px #dee1ec;
+
+    img {
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(3px 2px 4px rgba(118, 151, 163, 0.763));
+    }
+  }
+  .heading {
+    font-size: 20px;
+    font-family: var(--primary-font);
+    letter-spacing: 0.1px;
+    font-weight: 700;
+    padding: 20px 0 40px;
+    > div {
+      font-size: 25px;
+      letter-spacing: 0.3px;
+      font-weight: 800;
+      padding-left: 6px;
+      color: var(--primary-color);
+    }
+  }
+  .sub-heading {
+    font-size: 15px;
+    font-family: var(--primary-font);
+    color: rgb(13, 12, 54);
+    letter-spacing: 0.3px;
+    padding-bottom: 20px;
+  }
+  .stores-list-wrap {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .store-details {
+      justify-content: center;
+      width: 86%;
+      height: 60px;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+      font-weight: 500;
+      transition: all ease-out 0.3s;
+      border: 1px solid transparent;
+      letter-spacing: 0.2px;
+      &:active {
+        transition: all ease-out 0.3s;
+        color: var(--primary-color);
+        font-weight: 700;
+        transform: scale(1.04);
+        border-color: var(--primary-color-alpha);
+      }
+    }
+  }
+}

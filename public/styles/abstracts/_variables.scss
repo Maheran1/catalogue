@@ -1,0 +1,20 @@
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+$color-error: #ff003d;
+
+:root {
+  --primary-color: #fea1c2;
+  --primary-color-alpha: #f365b37a;
+  --primary-text-color: #282828;
+  // '#282828';
+  --primary-font: 'poppins-regular';
+  --atlantika: 'atlantika';
+  --bringHeart: 'bringHeart';
+  --mvboli: 'mvboli';
+}

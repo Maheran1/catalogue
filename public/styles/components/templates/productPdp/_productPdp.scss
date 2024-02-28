@@ -1,0 +1,212 @@
+.prodpdpcontainer {
+  width: 100%;
+  float: left;
+  position: relative;
+
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    z-index: 1;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .prodpdpbanner {
+    width: 100%;
+    float: left;
+    // height: 350px;
+  }
+
+  .alice-carousel__dots {
+    bottom: 50px !important;
+  }
+
+  .alice-carousel__dots-item:not(.__custom) {
+    border: 0px solid transparent !important;
+    width: 6px !important;
+    height: 6px !important;
+  }
+
+  .alice-carousel__dots-item:not(.__custom):hover,
+  .alice-carousel__dots-item:not(.__custom).__active {
+    background-color: var(--primary-color) !important;
+    border: 0px solid #000000 !important;
+    width: 6px !important;
+    height: 6px !important;
+    margin-bottom: 0px;
+  }
+
+  .prod-pdp-details {
+    width: 100%;
+    float: left;
+    // border-radius: 20px 20px 0 0;
+    // box-shadow: 0 0 5px #777;
+    margin-top: -15px;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 2;
+    padding: 15px;
+  }
+
+  .prod-pdp-off {
+    width: 100%;
+    float: left;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+  }
+
+  .prod-pdp-nameprice {
+    width: 100%;
+    float: left;
+    margin-bottom: 15px;
+  }
+
+  .prod-pdp-name {
+    width: 60%;
+    float: left;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .prod-pdp-price {
+    width: 40%;
+    float: right;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: right;
+
+    span {
+      font-size: 14px;
+      font-weight: 500;
+      color: #c2c2c2;
+      display: inline-block;
+      margin-right: 5px;
+      text-decoration: line-through;
+    }
+  }
+
+  .prod-pdp-sizetitle {
+    width: 100%;
+    float: left;
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+
+  .prod-pdp-size {
+    width: 100%;
+    float: left;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  .prod-pdp-size span {
+    display: inline-block;
+    float: left;
+    padding: 3px 7px 2px;
+    border-radius: 5px;
+    font-size: 10px;
+    color: #777777;
+    background-color: #c2c2c2;
+    font-weight: 500;
+    margin-right: 10px;
+  }
+
+  .prod-pdp-size span.active {
+    color: #303641;
+    background-color: var(--primary-color);
+  }
+
+  .MuiAccordionSummary-root svg {
+    fill: #ccc;
+    font-size: 30px;
+    margin-right: 0;
+  }
+
+  .accor-title {
+    font-size: 14px;
+  }
+
+  .MuiAccordionSummary-root {
+    padding: 0px 0px;
+    min-height: 30px;
+  }
+
+  .MuiAccordionSummary-content {
+    margin: 5px 0;
+  }
+
+  .MuiIconButton-root {
+    padding: 0px 12px !important;
+  }
+
+  .MuiAccordionDetails-root {
+    font-size: 12px !important;
+    font-weight: 300 !important;
+  }
+
+  .MuiAccordion-root:before {
+    height: 0px !important;
+  }
+
+  .itemcounter {
+    width: 100%;
+    float: left;
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
+
+  .itemcounterinner {
+    float: right;
+    width: auto;
+  }
+
+  .addtocartbtn {
+    width: auto;
+    float: right;
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 30px;
+    border-radius: 5px;
+    line-height: 28px;
+    padding: 0 10px;
+    cursor: pointer;
+  }
+
+  .counterbuttons {
+    width: 100%;
+    float: left;
+    min-width: 100px;
+  }
+
+  .countnum {
+    float: left;
+    width: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .countclick {
+    width: 30px;
+    height: 30px;
+    float: left;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-color);
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

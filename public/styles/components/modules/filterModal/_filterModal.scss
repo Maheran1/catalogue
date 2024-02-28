@@ -1,0 +1,158 @@
+.filter-modal-content-wrap {
+  padding: 5px 0;
+  .modal-heading {
+    width: 200px;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    text-align: left;
+    padding-bottom: 12px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .sub-heading {
+      font-size: 12px;
+      padding-left: 10px;
+      letter-spacing: 0.3px;
+    }
+  }
+  .filter-wrap {
+    border: 1px solid #dee1ec;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+    background: #eeeeee1f;
+    margin-bottom: 10px;
+    .heading {
+      text-align: left !important;
+      color: black;
+      font-size: 14px;
+      transition: all ease-out 0.3s;
+      font-family: 'poppins-regular';
+      letter-spacing: 0.3px;
+      font-weight: 600;
+    }
+    .filter-content {
+      padding: 0 10px;
+      .price-range-slider-wrap {
+        padding: 0 10px;
+      }
+      .MuiSlider-root {
+        padding-bottom: 20px;
+      }
+      .MuiSlider-root {
+        color: var(--primary-color);
+        .MuiSlider-rail {
+          transition: all ease-out 0.3s;
+          height: 4px;
+        }
+        .MuiSlider-track {
+          transition: all ease-out 0.3s;
+          height: 4px;
+        }
+        .MuiSlider-thumb {
+          transition: all ease-out 0.3s;
+          width: 15px;
+          height: 15px;
+          border-radius: 11px 11px 11px 0px;
+          transform: rotate(45deg);
+          &:after {
+            top: -4px;
+            left: -4px;
+            right: 0;
+            bottom: 0;
+            content: '';
+            position: absolute;
+            border-radius: 11px 11px 11px 0px;
+            // transform: rotate(45deg);
+            width: 23px;
+            height: 23px;
+            border: 1px solid var(--primary-color);
+          }
+        }
+        .MuiSlider-thumb[data-index='0'] {
+          border-radius: 11px 0px 11px 11px;
+          transform: rotate(45deg);
+          &::after {
+            border-radius: 11px 0px 11px 11px;
+          }
+        }
+      }
+      .price-range-filter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .range-value {
+          font-size: 13px;
+          font-weight: 700;
+          font-family: var(--primary-font);
+        }
+      }
+      .filter-type {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 16px;
+        transition: all ease-out 0.3s;
+
+        .filter-text {
+          font-size: 14px;
+          font-family: var(--primary-font);
+          font-weight: 500;
+          transition: all ease-out 0.3s;
+          letter-spacing: 0.3px;
+        }
+        .filter-icon {
+          // width: 17px;
+          // height: 17px;
+          // border: 1px solid gainsboro;
+          // border-radius: 11px;
+          // margin-right: 8px;
+          // padding: 3px;
+          // display: flex;
+          // justify-content: center;
+          // align-items: center;
+          // transition: all ease-out 0.3s;
+
+          transition: all ease-out 0.3s;
+          width: 17px;
+          height: 17px;
+          border: 1px solid gainsboro;
+          border-radius: 11px 0px 11px 11px;
+          margin-right: 12px;
+          padding: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transform: rotate(45deg);
+          div {
+            width: 100%;
+            transition: all ease-out 0.3s;
+            height: 100%;
+            border: 1px solid gainsboro;
+            background: #888;
+            border-radius: 11px 0px 11px 11px;
+          }
+        }
+        &.active {
+          transition: all ease-out 0.3s;
+          color: var(--primary-color);
+          .filter-text {
+            transition: all ease-out 0.3s;
+            font-weight: 700;
+          }
+          .filter-icon {
+            transition: all ease-out 0.3s;
+            border: 1px solid var(--primary-color);
+            div {
+              transition: all ease-out 0.3s;
+              border: 1px solid var(--primary-color);
+              background: var(--primary-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}

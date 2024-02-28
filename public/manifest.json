@@ -1,0 +1,37 @@
+{
+    "name": "Respark",
+    "short_name": "Salon Respark",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#fea1c2",
+    "theme_color": "#fea1c2",
+    "orientation": "portrait",
+    "description": "ReIgnite your business",
+    "icons": [
+        {
+            "src": "\/180.png",
+            "type": "image/png",
+            "sizes": "180x180"
+        },
+        {
+            "src": "\/192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "\/384.png",
+            "type": "image/png",
+            "sizes": "384x384"
+        },
+        {
+            "src": "\/512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "\/1024.png",
+            "type": "image/png",
+            "sizes": "1024x1024"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+.viewcartbar {
+  position: fixed;
+  width: 100%;
+  background-color: rgb(61 59 72 / 80%);
+  color: #ffffff;
+  font-size: 13px;
+  bottom: 0;
+  z-index: 9;
+  padding: 10px 15px;
+  line-height: 28px;
+  // backdrop-filter: saturate(180%) blur(7px);
+  max-width: 480px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .vcbitem {
+    width: auto;
+    float: left;
+    border-right: 2px solid #ffffff;
+    padding-right: 10px;
+    margin-right: 2px;
+  }
+
+  .vcbprice {
+    width: auto;
+    float: left;
+    padding-left: 10px;
+
+    .rupee-small {
+      color: #ffffff !important;
+      margin-right: 5px !important;
+    }
+  }
+
+  .vcbtxt {
+    width: auto;
+    float: right;
+  }
+
+  .whiteFont {
+    color: white;
+  }
+}

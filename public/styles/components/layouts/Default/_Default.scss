@@ -1,0 +1,17 @@
+.default {
+  width: 100%;
+  max-width: 480px;
+  margin: auto;
+  // height: calc(100vh - 75px);
+  min-height: calc(100vh - calc(100vh - 100%));
+  transition: all ease-out 0.4s;
+  background-image: url(/assets/images/female/bg.png);
+}
+
+.content {
+  position: relative;
+}
+
+.default-wrapper {
+  margin-top: 75px;
+}

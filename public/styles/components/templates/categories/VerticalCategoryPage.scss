@@ -1,0 +1,36 @@
+.category-data-wrap {
+  padding: 15px 0 0 0;
+  .category-name {
+    font-size: 16px;
+    font-weight: 600;
+    // margin-top: 10px;
+  }
+  .sub-category-name {
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 10px;
+  }
+  .MuiAccordionSummary-content {
+    margin: 0;
+  }
+  .MuiAccordionSummary-root svg {
+    font-size: 30px;
+    margin: 0;
+  }
+  .MuiIconButton-root {
+    padding: 10px 5px;
+  }
+  .MuiAccordionDetails-root {
+    padding-top: 0;
+  }
+  .sub-cat-wrap .MuiCollapse-container {
+    padding: 0 20px;
+  }
+  .MuiAccordionSummary-content.Mui-expanded {
+    margin: 10px 0;
+  }
+  .horizontal-product-card-wrap {
+    width: 100%;
+    padding: 0 15px;
+  }
+}

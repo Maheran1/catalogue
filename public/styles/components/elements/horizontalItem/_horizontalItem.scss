@@ -1,0 +1,188 @@
+.service-cover {
+  width: calc(100% + 20px);
+  /* margin-bottom: 5px; */
+  display: flex;
+  padding: 1px 0 8px 10px;
+  border-radius: 25px;
+  margin-left: -10px;
+  align-items: center;
+  color: #64626d;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start !important;
+  text-align: left;
+
+  &.service-pdp-flow {
+    justify-content: space-between;
+    flex-direction: row;
+
+    .price-select-wrap {
+      width: 72px;
+      justify-content: flex-end;
+
+      &.appointment-on {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+
+        .service-price {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .name-price-wrap {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 6px;
+
+    .service-name {
+      width: auto;
+      font-size: 14px;
+      color: black;
+      line-height: normal;
+      letter-spacing: 0.3px;
+      font-weight: 600;
+    }
+
+    .price-select-wrap {
+      display: flex;
+      width: auto;
+      justify-content: flex-end;
+      align-items: flex-end;
+      flex-direction: column;
+
+      .service-price {
+        font-size: 13px;
+        font-weight: 600;
+        color: #4c4c4c;
+      }
+      .itag {
+        font-size: 12px;
+        font-weight: 600;
+        color: #4c4c4c;
+        margin-bottom: 6px;
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  .description {
+    font-size: 14px;
+    color: black;
+    font-weight: 400;
+    margin-bottom: 5px;
+    span {
+      color: var(--primary-color);
+      margin-left: 5px;
+    }
+  }
+
+  .duration-select-wrap {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    .serv-pdp-servtypetime {
+      width: auto;
+      text-align: right;
+      font-size: 12px;
+      text-transform: capitalize;
+      letter-spacing: 0.5px;
+      color: black;
+      font-weight: 400;
+
+      .duration {
+        width: 50px;
+      }
+    }
+
+    .select-btn {
+      // border: 1px solid var(--primary-color-alpha);
+      border-radius: 4px;
+      padding: 7px 20px;
+      color: black;
+      font-size: 14px;
+      background-color: var(--primary-color-alpha);
+      filter: drop-shadow(4px 2px 6px var(--primary-color) 59);
+      box-shadow: #f0f0f0 2px 3px 5px 0px;
+
+      &.selected {
+        background-color: unset;
+        border: 1px solid #e9ebec;
+      }
+    }
+  }
+
+  .service-arrow-icon {
+    width: 18px;
+    height: 18px;
+    background: #e6e7e8;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    color: var(--primary-color);
+    align-items: center;
+    padding: 2px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    &.onward {
+      background: unset;
+      font-size: 10px;
+      padding: unset;
+    }
+  }
+
+  .prod-sale-price {
+    float: right;
+    width: max-content;
+    text-align: right;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: var(--primary-font);
+
+    span {
+      font-size: 14px;
+      font-weight: 500;
+      color: #c2c2c2;
+      display: inline-block;
+      margin-right: 5px;
+      text-decoration: line-through;
+    }
+    &.p-on-req {
+      font-size: 12px;
+      color: black;
+    }
+  }
+}
+
+.variation-selection-modal {
+  .modal-close {
+    top: 10px !important;
+    right: 10px !important;
+  }
+
+  .variation-wrap {
+    padding: 10px !important;
+  }
+
+  .variation-name,
+  .variation-price,
+  .heading {
+    font-size: 15px !important;
+  }
+
+  .service-pdp-details {
+    padding: 0;
+  }
+}

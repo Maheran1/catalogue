@@ -1,0 +1,9 @@
+export const BANNER_NO_IMAGE = '/assets/No_Image/banner_no_image.jpg';
+export const SMALL_SLIDER_NO_IMAGE = '/assets/No_Image/middle_slider_no_image.jpg';
+export const SKILLED_STAFF_NO_IMAGE = '/assets/No_Image/skilled_staff_no_image.jpg';
+export const LARGE_SLIDER_NO_IMAGE = '/assets/No_Image/package_offer_no_image.jpg';
+export const CIRCLE_NO_IMAGE = '/assets/No_Image/circle_no_image.png';
+export const OUR_SERVICES_NO_IMAGE = '/assets/No_Image/our_services_no_image.jpg';
+export const PRODUCT_LIST_NO_IMAGE = '/assets/No_Image/product_list_no_image.jpg';
+export const PDP_NO_IMAGE = '/assets/No_Image/product_pdp_no_image.jpg';
+export const SUB_CAT_NO_IMAGE = '/assets/No_Image/sub_cat_no_img.jpg';

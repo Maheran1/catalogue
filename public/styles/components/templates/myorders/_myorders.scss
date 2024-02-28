@@ -1,0 +1,116 @@
+.order-history-outer {
+  padding: 10px;
+
+  .order-card {
+    border-radius: 10px;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 10%),
+      0px 1px 1px 1px rgb(0 0 0 / 10%), 0px 1px 3px 1px rgb(0 0 0 / 10%);
+    height: auto;
+    border-left: 8px solid var(--primary-color);
+    padding: 14px;
+    margin: 10px 0px;
+    background: white;
+  }
+
+  .heading {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 0 !important;
+    font-size: 18px;
+  }
+
+  .right-align {
+    float: right;
+  }
+
+  .order-type {
+    font-size: 12px;
+    color: var(--primary-color);
+    margin: 5px 0;
+  }
+
+  .color {
+    color: #9e9c9c;
+  }
+
+  .action-button {
+    border-bottom: 1px solid var(--primary-color);
+    margin-right: 10px;
+    font-size: 11px;
+  }
+
+  .backdrop-modal-content {
+    border-radius: unset;
+    padding: unset;
+    z-index: 20;
+    padding: 15px;
+
+    .modal-close {
+      top: 15px;
+      right: 15px;
+    }
+
+    .invoice-wrapper {
+      padding: 10px;
+
+      .invoice-page-wrap {
+        height: calc(85vh - 75px);
+        overflow: auto;
+      }
+    }
+  }
+
+  .order-details-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: white;
+    z-index: 10;
+  }
+
+}
+
+.orders-unavailable {
+  font-family: var(--primary-font);
+  height: calc(100vh - 420px);
+  font-size: 15px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.ordrer-backdrop-modal-wrapper {
+
+  padding: 10px;
+  z-index: 20 !important;
+
+  .pricing-details-wrap {
+    overflow: auto;
+    height: calc(100vh - 60px);
+  }
+
+  .orderBillPrintModal {
+    margin-top: 10px;
+  }
+
+  .selected-language-wrap {
+    position: fixed;
+    top: 17px;
+    z-index: 16;
+    min-width: 100px;
+    width: 100px;
+    right: 5%;
+    transform: unset;
+    left: unset;
+  }
+
+  .modal-close {
+    top: 15px;
+    left: 15px;
+  }
+}

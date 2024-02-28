@@ -1,0 +1,34 @@
+.billDetails-title {
+  text-align: left;
+  font-size: 15px;
+  font-weight: 500;
+}
+.orderwrap {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  padding: 8px 0;
+}
+.border {
+  padding-top: 14px;
+  border-top: 1px solid var(--primary-color);
+}
+.productName {
+  text-align: left;
+}
+.price {
+  text-align: right;
+}
+.align-left {
+  float: left;
+}
+.align-right {
+  float: right;
+}
+.close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+.cancel-img {
+  width: 60%;
+}

@@ -1,0 +1,93 @@
+.con-main-wrap {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  padding: 15px 0 0;
+  background-color: white;
+  color: #3f3d55;
+
+  .con-wrap {
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    padding: 0 10% 30px;
+    float: left;
+    width: 100%;
+
+    .cart-logo {
+      width: 100%;
+    }
+
+    .cart-status {
+      font-weight: 600;
+      font-size: 13pt;
+      margin-top: 10%;
+      margin-bottom: 5%;
+    }
+
+    .cart-subtext {
+      font-size: 10pt;
+      padding: 5px 0;
+    }
+  }
+
+  .order-details-wrap {
+    padding: 16px;
+    float: left;
+    width: 100%;
+    .heading {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .item-wrap {
+      border-bottom: 1px solid #9e9e9e;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+
+      .name {
+        width: 70%;
+        display: inline-block;
+        float: left;
+      }
+
+      .price {
+        width: 30%;
+        display: inline-block;
+        float: right;
+        text-align: right;
+      }
+
+      .variation-wrap {
+        .name {
+          color: var(--primary-color);
+        }
+      }
+    }
+
+    .order-total {
+      font-size: 15px;
+      text-align: right;
+      margin-top: 5px;
+    }
+
+    .cart-button-wrap {
+      text-align: center;
+      position: sticky;
+      bottom: 0;
+      text-align: center;
+      background-color: white;
+
+      .cart-button {
+        border: unset;
+        outline: unset;
+        border-radius: 5px;
+        padding: 10px 50px;
+        margin: 15px 0;
+        background-color: var(--primary-color);
+        color: white;
+        font-weight: 500;
+      }
+    }
+  }
+}

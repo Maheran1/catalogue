@@ -1,0 +1,459 @@
+.invoice-wrapper {
+  padding: 10px 10px 55px;
+
+  .page-heading {
+    box-shadow: #dee1ec82 0px 2px 8px 0px;
+    padding: 10px 15px;
+    margin-bottom: 11px;
+    border-radius: 6px;
+    background: #ffffff;
+    text-align: center;
+    font-size: 15px;
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .subheading {
+    font-size: 13px;
+    text-align: left;
+    font-weight: 600;
+    // padding: 0 0 4px;
+    letter-spacing: 0.2px;
+    display: flex;
+  }
+
+  .invoice-page-wrap {
+    padding: 10px;
+    margin-bottom: 11px;
+    box-shadow: #dee1ec82 0px 2px 8px 0px;
+    margin-bottom: 11px;
+    border-radius: 6px;
+    background: #ffffff;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+
+    .salon-details-wrap {
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+
+      .logo-wrap {
+        width: 110px;
+        margin: auto;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .salon-details {
+        width: 100%;
+
+        .name {
+          text-transform: capitalize;
+          font-size: 15px;
+          font-family: 'poppins-medium';
+        }
+
+        .s-detail {
+          font-size: 13px;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+
+    .user-details-wrap {
+      display: flex;
+      justify-content: space-between;
+      // border-bottom: 1px solid rgb(0 0 0 / 12%);
+      margin-bottom: 10px;
+      text-align: left;
+      padding-bottom: 5px;
+
+      .subheading {
+        font-family: 'poppins-medium';
+      }
+
+      .user-details {
+        width: 60%;
+
+        .time {
+          font-size: 13px;
+        }
+
+        .name,
+        .phone {
+          font-size: 13px;
+        }
+
+        .phone {
+          // padding-left: 46px;
+        }
+      }
+
+      .date-wrap {
+        .subheading {
+          justify-content: flex-end;
+          font-size: 11px;
+          min-width: max-content;
+          gap: 5px;
+        }
+
+        width: 40%;
+
+        .date,
+        .time {
+          font-size: 13px;
+          display: flex;
+          min-width: max-content;
+          justify-content: flex-end;
+        }
+
+        .order-id {
+          min-width: max-content;
+          justify-content: flex-end;
+        }
+      }
+    }
+
+    .services-heading {
+      padding-bottom: 10px;
+      font-family: 'poppins-medium';
+    }
+
+    .invoice-details-wrap {
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      padding: 5px;
+      border-radius: 4px;
+
+      .services-list-wrap {
+        border-bottom: 1px solid rgb(0 0 0 / 12%);
+        // margin: 8px 0;
+        padding-bottom: 5px;
+        min-height: 100px;
+        text-transform: capitalize;
+
+        .heading-wrap {
+          font-size: 12px;
+          padding: 4px 0;
+          background: rgb(216 219 232 / 65%);
+          margin-bottom: 4px;
+          border-radius: 3px;
+          font-weight: 600;
+        }
+
+        .srnumber {
+          width: 5%;
+          text-align: center;
+          font-family: 'poppins-medium';
+        }
+
+        .name {
+          font-family: 'poppins-medium';
+          width: 45%;
+        }
+
+        .expert {
+          font-family: 'poppins-medium';
+          width: 20%;
+        }
+
+        .qty {
+          font-family: 'poppins-medium';
+          width: 10%;
+          text-align: center;
+        }
+
+        .amt {
+          width: 11%;
+          font-family: 'poppins-medium';
+          text-align: right;
+          padding-left: 27px;
+        }
+
+        .details-wrap {
+          .width-100 {
+            border: 1px solid #dde2eb;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            padding: 4px;
+
+            .applied-data {
+              padding: 0 10px;
+              color: green;
+              font-size: 10px;
+              padding-left: 20px;
+              text-align: right;
+            }
+          }
+
+          .service-details {
+            font-size: 12px;
+            padding: 4px 0;
+            font-family: 'poppins-regular' !important;
+            align-items: flex-start;
+
+            .srnumber,
+            .name,
+            .expert,
+            .qty,
+            .duration,
+            .amt {
+              font-family: 'poppins-regular' !important;
+            }
+
+            .name {
+              text-align: left;
+            }
+
+            .name {
+              .variations-wrap {
+                font-size: 12px;
+                color: #363636;
+                letter-spacing: 0.3px;
+                width: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .bill-item-type-wrap {
+      >.heading {
+        text-align: left;
+        padding: 0 !important;
+        font-size: 12px;
+        margin-top: 13px;
+        font-weight: 700;
+      }
+    }
+
+    .invoice-total-details-wrap {
+      margin: 10px 0;
+      display: flex;
+      justify-content: flex-end;
+      text-align: end;
+
+      .total-details {
+        width: 60%;
+
+        .heading {
+          width: 60%;
+          font-size: 14px;
+          color: black;
+          text-align: end;
+          padding: unset;
+          letter-spacing: 0.5px;
+          padding: unset !important;
+
+          .head {
+            font-size: 13px;
+            font-weight: 500px;
+          }
+        }
+
+        .details {
+          width: 40%;
+          font-size: 13px;
+          font-family: 'poppins-regular' !important;
+          color: black;
+          text-align: end;
+          padding: unset;
+          letter-spacing: 0.5px;
+
+          .value {
+            font-family: 'poppins-regular';
+            padding-right: 3px;
+          }
+        }
+
+        .grand-total {
+          font-family: 'poppins-medium' !important;
+          font-size: 13px !important;
+          border-top: 1px dotted gainsboro;
+          margin-top: 3px;
+          padding-top: 1px;
+        }
+      }
+
+      &.type-wise-order-invoice {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .total-details {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          flex-wrap: wrap;
+
+          .total-entity-wrap {
+            width: auto;
+            padding: unset !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 0.2px;
+            margin-left: 16px;
+
+            .title {
+              font-size: 10px;
+              font-family: 'poppins-regular';
+              color: gray;
+            }
+
+            .value {
+              font-size: 12px;
+              width: auto;
+              padding-left: 5px;
+              color: black;
+            }
+          }
+
+          &.overall-total-wrap {
+            border: 1px solid gainsboro;
+            padding: 10px 10px 10px 0;
+            border-radius: 4px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+
+    .payment-wrap {
+      padding: 5px;
+
+      .payment-by {
+        display: flex;
+        justify-content: space-between;
+
+        .paid-via {
+          width: auto;
+          font-size: 12px;
+          justify-content: flex-start;
+          display: flex;
+
+          img {
+            width: 20px;
+            margin-left: 8px;
+            height: 20px;
+          }
+
+          span {
+            margin-right: 6px;
+          }
+        }
+
+        .setteled-by {
+          font-size: 12px;
+          text-align: end;
+        }
+      }
+    }
+
+    .note {
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      padding: 10px;
+      letter-spacing: 0.1px;
+      margin: 10px 0;
+    }
+  }
+
+  .footer-btn-wrap {
+    position: fixed;
+    bottom: 0;
+    padding: 10px 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .no-data {
+    height: calc(100vh - 150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+  }
+
+}
+
+.orderBillPrintModal {
+  // display: flex;
+  // justify-content: flex-start;
+  // align-items: flex-start;
+  width: 100%;
+
+  .billContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid #dee1ec;
+    border-radius: 4px;
+  }
+
+  .selected-language-wrap {
+    position: fixed;
+    top: 17px;
+    right: 15px;
+    z-index: 16;
+    min-width: 100px;
+    width: 100px;
+    left: 60%;
+    transform: translateX(-50%);
+
+    .selected-language {
+      position: relative;
+      border: 1px solid #dee1ec;
+      padding: 8px 20px;
+      border-radius: 7px;
+      font-weight: 500;
+      background: #dee1ec;
+
+    }
+
+    .searched-item-list-wrap {
+      overflow: hidden;
+      position: absolute;
+      top: 41px;
+      left: -15px;
+      background: white;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-width: 110px;
+
+      .expert-details {
+        background: white;
+        border: 1px solid #dee1ec;
+        padding: 8px;
+        border-radius: 4px;
+        min-width: 100px;
+        text-align: center;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,33 @@
+export const UPDATE_LOADER_STATUS = 'UPDATE_LOADER_STATUS';
+
+export const UPDATE_GROUP_STATUS = 'UPDATE_GROUP_STATUS';
+
+export const UPDATE_GENERIC_IMAGES = 'UPDATE_GENERIC_IMAGES';
+
+export const UPDATE_WHATSAPP_TEMPLATES = 'UPDATE_WHATSAPP_TEMPLATES';
+
+export const UPDATE_CURRENT_PAGE = 'UPDATE_CURRENT_PAGE';
+
+export const UPDATE_PDP_ITEM = 'UPDATE_PDP_ITEM';
+export const UPDATE_PDP_ITEM_STATUS = 'UPDATE_PDP_ITEM_STATUS';
+
+export const UPDATE_SHOW_SERVICES_CART = 'UPDATE_SHOW_SERVICES_CART';
+
+export const UPDATE_STORES_LIST = 'UPDATE_STORES_LIST';
+
+export const UPDATE_SEARCH_STATUS = 'UPDATE_SEARCH_STATUS';
+
+export const UPDATE_ERROR_STATUS = 'UPDATE_ERROR_STATUS';
+
+export const UPDATE_ITEM_STOCK = 'UPDATE_ITEM_STOCK';
+
+export const GENERIC_IMAGE_APP_KEY = 'appBg';
+export const GENERIC_IMAGE_FOOTER_KEY = 'footerBg';
+export const GENERIC_IMAGE_LOGIN_SCREEN_KEY = 'loginScreenBg';
+export const GENERIC_IMAGE_HAMBURGER_KEY = 'hamburgerBg';
+
+//indexing for taxes as binary represantations
+export const SERVICES_INDEX = 0;
+export const PRODUCTS_INDEX = 1;
+export const MEMBERSHIPS_INDEX = 2;
+export const PACKAGES_INDEX = 3;

@@ -1,0 +1,41 @@
+.alert-msg-wrap {
+  &.MuiSnackbar-root {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    right: 8px !important;
+    top: 13px !important;
+    z-index: 1400 !important;
+    position: fixed !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    min-width: 70vw;
+
+    .MuiAlert-message {
+      min-width: 190px;
+    }
+  }
+}
+
+.slider-dialog-wrapper {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  z-index: 1400;
+  left: 0;
+  right: 0;
+
+  .bottom-slider {
+    left: 0;
+    right: 0;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    padding: 15px;
+    background: #303641;
+    color: white;
+  }
+}

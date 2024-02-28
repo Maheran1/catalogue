@@ -1,0 +1,89 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "baseUrl": ".",
+    "paths": {
+      "@element/*": [
+        "./app/components/elements/*"
+      ],
+      "@svgs/*": [
+        "./app/components/elements/svgElements/*"
+      ],
+      "@layout/*": [
+        "./app/components/layouts/*"
+      ],
+      "@module/*": [
+        "./app/components/modules/*"
+      ],
+      "@template/*": [
+        "./app/components/templates/*"
+      ],
+      "@styles/*": [
+        "./public/styles/*"
+      ],
+      "@constant/*": [
+        "./app/constants/*"
+      ],
+      "@context/*": [
+        "app/redux/*"
+      ],
+      "@type/*": [
+        "./app/types/*"
+      ],
+      "@hook/*": [
+        "./app/hooks/*"
+      ],
+      "@action/*": [
+        "app/redux/actions/*"
+      ],
+      "@reducer/*": [
+        "app/redux/reducers/*"
+      ],
+      "@store/*": [
+        "app/redux/stateProvider/*"
+      ],
+      "@util/*": [
+        "./app/utils/*"
+      ],
+      "@storeData/*": [
+        "./app/dataFetching/*"
+      ],
+      "@api/*": [
+        "./app/utils/apiService/*"
+      ],
+      "@assets/*": [
+        "./public/assets/*"
+      ]
+    },
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveConstEnums": true,
+    "strictFunctionTypes": true,
+    "jsx": "preserve",
+    "incremental": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.svg",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
