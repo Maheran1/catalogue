@@ -1,0 +1,106 @@
+def getEmailSubject(buildResult) {
+    if (buildResult == 'SUCCESS') {
+        return 'SUCCESS: SonarQube Analysis is successful!'
+    } else {
+        return 'FAILURE: SonarQube Analysis Failed!'
+    }
+}
+
+def getEmailBody(buildResult) {
+    def emailBody = "The Jenkins build is complete.\n\nSonarQube results link: ${SONAR_URL}\n"
+
+    if (buildResult == 'SUCCESS') {
+        emailBody += "No potential issues were found, quality gate passed."
+    } else {
+        emailBody += "Blockers and criticals were found, Please take necessary actions.\n\n"
+
+        // Get information about the latest commit
+        def commitInfo = sh(script: 'git log -1 --pretty=format:"Email: %ae Name: %an committed %h - %s"', returnStdout: true).trim()
+        emailBody += "Latest commit information:\n${commitInfo}\n"
+    }
+
+    return emailBody
+}
+
+def getAnalysisId() {
+    def analysisIdCommand = """
+        base64AuthInfo=\$(echo -n "${SONAR_TOKEN}:" | base64)
+        uri="${SONAR_URL}/api/project_analyses/search?project=${PROJECT_KEY}&component=VERSION&ps=1"
+        analysisIdJson=\$(curl -s -H "Authorization: Basic \${base64AuthInfo}" \${uri} | jq -r '.analyses | sort_by(.date) | .[-1].key')
+        echo "\${analysisIdJson}"
+    """
+
+    return sh(script: analysisIdCommand, returnStdout: true).trim()
+}
+
+pipeline {
+    agent any
+
+    environment {
+        SONAR_TOKEN = squ_545683862093540dbbd55f0202855544e9cdf906// 
+        SONAR_URL = 'http://43.204.131.130:9000' // Replace with your SonarQube server URL
+        PROJECT_KEY = 'com.devourin:catalogue' // Replace with your project key
+    }
+
+    stages {
+
+        stage('Build') {
+            steps {
+                script {
+                    sh 'npm install'
+                    sh 'npm run build'
+                }
+            }
+        }
+
+        stage('SonarQube Analysis') {
+            steps {
+                script {
+                    def scannerHome = tool 'SonarQubeScanner'
+                    withSonarQubeEnv('SonarQube Server') {
+                        sh "${scannerHome}/bin/sonar-scanner"
+                    }
+                }
+            }
+        }
+
+        stage('Quality Gate Check') {
+            steps {
+                script {
+                    def latestAnalysisId = getAnalysisId()
+
+                    if (latestAnalysisId) {
+                        echo "Latest SonarQube Analysis ID: ${latestAnalysisId}"
+
+                        def qualityGateResponse = sh(script: "curl -s -u ${SONAR_TOKEN}: ${SONAR_URL}/api/qualitygates/project_status?analysisId=${latestAnalysisId}", returnStdout: true).trim()
+
+                        def jsonSlurper = new groovy.json.JsonSlurper()
+                        def qualityGateJson = jsonSlurper.parseText(qualityGateResponse)
+
+                        echo "Quality Gate Response: ${qualityGateJson.projectStatus.status}"
+
+                        if (qualityGateJson.projectStatus.status == 'ERROR') {
+                            error 'Quality Gate failed. Take necessary actions.'
+                        } else {
+                            echo 'Quality Gate passed. Continuing with the pipeline.'
+                        }
+                    } else {
+                        echo 'No analysis ID found. Skipping Quality Gate Check.'
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            script {
+                // Send email notification with SonarQube results link and quality gate status
+                emailext body: getEmailBody(currentBuild.result),
+                        subject: getEmailSubject(currentBuild.result),
+                        to: 'maheran@devourin.com',
+                        attachLog: true
+            }
+        }
+    }
+}
