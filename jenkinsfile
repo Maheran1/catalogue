@@ -48,7 +48,7 @@ pipeline {
         stage('Install n Version Manager') {
             steps {
                 script {
-                    sh 'npm install -g n'
+                    sh 'sudo npm install -g n'
                 }
             }
         }
