@@ -48,7 +48,15 @@ pipeline {
         stage('Install n Version Manager') {
             steps {
                 script {
-                    sh 'sudo npm install -g n'
+                    sh 'npm install n'
+                }
+            }
+        }
+        
+        stage('Set PATH for n') {
+            steps {
+                script {
+                    sh 'export PATH=$PATH:./node_modules/n/bin'
                 }
             }
         }
