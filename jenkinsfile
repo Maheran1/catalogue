@@ -43,23 +43,25 @@ pipeline {
         SONAR_URL = 'http://43.204.131.130:9000'
         PROJECT_KEY = 'com.devourin:catalogue'
     }
+        stages{
 
-    stages {
         stage('Install Node.js with nvm') {
             steps {
                 script {
                     // Install nvm
                     sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash'
 
-                    sh 'export NVM_DIR="$HOME/.nvm"
-                        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
+                    // Source nvm script
+                    sh 'export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
 
-                    sh 'node --version'
-
-                    //sh 'export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \\. "$NVM_DIR/nvm.sh"'
+                    // Print nvm version (optional)
+                    sh 'nvm --version'
 
                     // Install Node.js
-                    //sh "nvm install ${NODE_VERSION}"
+                    sh "nvm install ${NODE_VERSION}"
+
+                    // Print Node.js version (optional)
+                    sh 'node --version'
                 }
             }
         }
