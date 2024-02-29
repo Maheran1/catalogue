@@ -45,6 +45,12 @@ pipeline {
 
     stages {
 
+        stage('version check'){
+            steps{
+                    sh 'node --version'
+            }
+        }
+
         stage('Build') {
             steps {
                 script {
