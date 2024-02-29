@@ -47,6 +47,8 @@ pipeline {
 
         stage('version check'){
             steps{
+                    sh "nvm install ${NODE_VERSION}" // Install the specified Node.js version
+                    sh "nvm use ${NODE_VERSION}"     // Use the specified Node.js version
                     sh 'node --version'
             }
         }
