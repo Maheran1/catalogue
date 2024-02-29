@@ -38,26 +38,33 @@ pipeline {
 
     environment {
         NODE_VERSION = '14'
-        PATH = "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:./node_modules/n/bin"
+        PATH = "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:$HOME/.nvm/versions/node/v${NODE_VERSION}/bin"
         SONAR_TOKEN = 'squ_545683862093540dbbd55f0202855544e9cdf906' 
-        SONAR_URL = 'http://43.204.131.130:9000' // Replace with your SonarQube server URL
-        PROJECT_KEY = 'com.devourin:catalogue' // Replace with your project key
+        SONAR_URL = 'http://43.204.131.130:9000'
+        PROJECT_KEY = 'com.devourin:catalogue'
     }
 
     stages {
-
-        stage('Install n Version Manager') {
+        stage('Install Node.js with nvm') {
             steps {
                 script {
-                    sh 'npm install n'
+                    // Install nvm
+                    sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash'
+
+                    // Load nvm
+                    sh 'export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
+
+                    // Install Node.js
+                    sh "nvm install ${NODE_VERSION}"
                 }
             }
         }
-        
-        stage('Set PATH for n') {
+
+        stage('Set PATH for Node.js') {
             steps {
                 script {
-                    sh 'export PATH=$PATH:./node_modules/n/bin'
+                    // Add Node.js binary path to PATH
+                    sh 'export PATH=$PATH:$HOME/.nvm/versions/node/v${NODE_VERSION}/bin'
                 }
             }
         }
@@ -65,7 +72,6 @@ pipeline {
         stage('version check') {
             steps {
                 script {
-                    sh 'sudo -E -n n stable' // Install and use the latest stable Node.js version
                     sh 'node --version'
                 }
             }
