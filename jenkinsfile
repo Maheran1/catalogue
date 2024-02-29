@@ -37,7 +37,7 @@ pipeline {
     agent any
 
     environment {
-        NODE_VERSION = '14'
+        //NODE_VERSION = '14'
         NVM_DIR = "$HOME/.nvm"
         PATH = "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:$HOME/.nvm/versions/node/v${NODE_VERSION}/bin"
         SONAR_TOKEN = 'squ_545683862093540dbbd55f0202855544e9cdf906' 
@@ -46,7 +46,7 @@ pipeline {
     }
 
     tools {
-        nodejs "node-${NODE_VERSION}"
+        nodejs 'nodejs'
     }
 
     stages{
