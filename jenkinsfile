@@ -45,11 +45,20 @@ pipeline {
 
     stages {
 
-        stage('version check'){
-            steps{
-                    sh "nvm install ${NODE_VERSION}" // Install the specified Node.js version
-                    sh "nvm use ${NODE_VERSION}"     // Use the specified Node.js version
+        stage('Install n Version Manager') {
+            steps {
+                script {
+                    sh 'npm install -g n'
+                }
+            }
+        }
+
+        stage('version check') {
+            steps {
+                script {
+                    sh 'n stable' // Install and use the latest stable Node.js version
                     sh 'node --version'
+                }
             }
         }
 
