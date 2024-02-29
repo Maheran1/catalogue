@@ -65,7 +65,7 @@ pipeline {
         stage('version check') {
             steps {
                 script {
-                    sh 'n stable' // Install and use the latest stable Node.js version
+                    sh 'sudo n stable' // Install and use the latest stable Node.js version
                     sh 'node --version'
                 }
             }
