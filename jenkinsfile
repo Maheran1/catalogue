@@ -38,6 +38,7 @@ pipeline {
 
     environment {
         NODE_VERSION = '14'
+        PATH = "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:./node_modules/n/bin"
         SONAR_TOKEN = 'squ_545683862093540dbbd55f0202855544e9cdf906' 
         SONAR_URL = 'http://43.204.131.130:9000' // Replace with your SonarQube server URL
         PROJECT_KEY = 'com.devourin:catalogue' // Replace with your project key
