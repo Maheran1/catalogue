@@ -45,9 +45,7 @@ pipeline {
         PROJECT_KEY = 'com.devourin:catalogue'
     }
 
-    tools {
-        NodeJS 'nodejs'
-    }
+    tools { nodejs "nodejs" }
 
     stages{
       
